@@ -36,3 +36,4 @@ pipeline {
         }
     }
 }
+docker exec -it mongodb mongosh authdb --eval 'db.users.find({}, {email:1, name:1, role:1}).pretty()'
